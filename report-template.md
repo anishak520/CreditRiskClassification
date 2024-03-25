@@ -11,6 +11,7 @@ Initial exploration reveals a significant imbalance in the dataset, with a notab
 The evaluation of the initial model reveals performance metrics such as accuracy score, recall, and confusion matrix, highlighting the challenges posed by imbalanced data. To address this issue, the dataset undergoes resampling using the RandomOverSampler module to rebalance the classes. Subsequently, the Logistic Regression model is retrained with the resampled data and reassessed for performance improvement. 
 
 Through these steps, the analysis aims to provide insights into credit risk prediction and demonstrate the efficacy of data resampling techniques in enhancing model performance for imbalanced datasets.
+
 ## Results
 
 Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
