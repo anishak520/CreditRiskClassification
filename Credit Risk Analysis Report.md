@@ -14,16 +14,22 @@ Through these steps, the analysis aims to provide insights into credit risk pred
 
 ## Results
 
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
-
 * Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+    * The model generated an accuracy score of 95% but could be improved due to the dataset being imbalanced.
+    * The Logistic Regression model fitted with the Imbalanced DataSet predicted healthy loans 100% of the time and predicted non-healthy loans 85% of the time
+    * According to the models recall scores, the model made 1% of mistakes when predicting healthy loans and made 9% of mistakes when predicted non-healthy loans
+
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
+A lending company might want a model that requires classifying healthy loans and non-healthy loans correctly most of the time: healthy loans being identified as a non-healthy loan might be more costly for a lending company since it might cause the loss of customers; whereas, non-healthy loans being identified as a healthy loan might also be more costly for a lending company due to the loss of funds being provided by the lender
 
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+AKA: The lending company would most likely want fewer False Positives due to the high possibility of a lender loosing provided funds when classifying non-healthy loans as healthy. The data below is shown in the confusion matrices which indicates how many healthy/non-healthy loans the model predicted correctly or incorrectly.
 
-If you do not recommend any of the models, please justify your reasoning.
+Model false positives:
+
+56 (FALSE POSITIVES) --> The actual value is healthy and the predicted value is non-healthy
+
+102 (FALSE NEGATIVES) --> The actual value is non-healthy and the predicted value is healthy
+
+Based off of this analysis criteria, I wouldn't recommend this Logisitics Regression model without oversampling the data set first to control for mistakes when classifying non-healthy loans.
